@@ -32,7 +32,7 @@ Tip: If you already get correct letters after your first two guesses,
 do not try to guess words with the letters in the correct places,
 instead try to eliminate as many letters from the alphabet as possible within your first 3 guesses.
 
-
+## The Computer plays
 Instead of the user having to input a guess, the program will input guesses for the user. The user can activate this program, if the user inputs "new" or "load", and then a game number <1,2135>. After that, the program will input guesses for the user, until the winning word is found.  
 
 After downloading the all the files from the tar file, the user can input "make" into there terminal. Be sure to be in the hw1 directory. After that input "./wordle", and then a menu will pop up. You can then type new, for a new game. Or, you can input load, and then input the game number from 1 to 2135. From there, the program will input guesses, and win at Wordle. Enjoy!
