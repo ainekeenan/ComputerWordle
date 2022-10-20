@@ -31,7 +31,7 @@ this application also shows you which letters you haven't used yet.
 ## The Computer Plays
 Instead of the user having to input a guess, the program will input guesses for the user. The user can activate this program, if the user inputs "new" or "load", and then a game number <1,2135>. After that, the program will input guesses for the user, until the winning word is found.  
 
-After downloading the all the files from the tar file, the user can input "make" into there terminal. Be sure to be in the hw1 directory. After that input "./wordle", and then a menu will pop up. You can then type new, for a new game. Or, you can input load, and then input the game number from 1 to 2135. From there, the program will input guesses, and win at Wordle. Enjoy!
+After downloading the all the files from the tar file, the user can input "make" into there terminal. Be sure to be in the directory that holds wordle.c . After that input "./wordle", and then a menu will pop up. You can then type new, for a new game. Or, you can input load, and then input the game number from 1 to 2135. From there, the program will input guesses, and win at Wordle. Enjoy!
 
 
 ## Installation
