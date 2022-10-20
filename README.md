@@ -33,7 +33,6 @@ Instead of the user having to input a guess, the program will input guesses for 
 
 After downloading the all the files from the tar file, the user can input "make" into there terminal. Be sure to be in the hw1 directory. After that input "./wordle", and then a menu will pop up. You can then type new, for a new game. Or, you can input load, and then input the game number from 1 to 2135. From there, the program will input guesses, and win at Wordle. Enjoy!
 
-The program do
 
 ## Installation
 
