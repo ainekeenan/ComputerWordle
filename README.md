@@ -5,7 +5,7 @@ This program takes the simple game wordle. The instructions for wordle is below.
 A very simple wordle clone in C.
 It doesn't uses any cursor movement instructions or OS dependent functions.
 
-It compiles in Borland Turbo C++ and runs under DOS.
+
 
 ## Quick introduction to Wordle
 
@@ -28,10 +28,6 @@ This means if you guess `ZORRO` when the word is `CRANE` it will show `__o__` an
 In addition to the basic rules,
 this application also shows you which letters you haven't used yet.
 
-Tip: If you already get correct letters after your first two guesses,
-do not try to guess words with the letters in the correct places,
-instead try to eliminate as many letters from the alphabet as possible within your first 3 guesses.
-
 ## The Computer Plays
 Instead of the user having to input a guess, the program will input guesses for the user. The user can activate this program, if the user inputs "new" or "load", and then a game number <1,2135>. After that, the program will input guesses for the user, until the winning word is found.  
 
@@ -41,16 +37,15 @@ The program do
 
 ## Installation
 
-1. Download the appropriate executable from the releases section, or [use gitload to simplify it](https://gitload.net/AyrA/Wordle-C)
-2. Create a directory "list" and put the two word lists from the releases in there
+1. Download the appropriate executable from the releases section, or [use gitload to simplify it]
+
 
 ## Usage
 
 You're presented with a menu when you launch the application.
 
-Note: This is a console application.
-You can double click to run it, but it will close immediately when the game ends.
-This means if the game ends on the 6th turn you don't know if you won or lost.
+Input New to start a new game.
+Input Load, and then the game number, to load a specific game, numbers 1 through 2137. 
 
 ## Game Id
 
@@ -134,9 +129,4 @@ The result of this is:
 - The solution list only needs to be scanned when a game is started to pick the word but not to count words.
 - The full word list is only ever scanned for words with the same letter as the current guess.
 
-## Running on old machines
-
-Various floppy disk images are provided with the game and word lists on them.
-
-Sizes: 360k, 720k, 1.4M
 
