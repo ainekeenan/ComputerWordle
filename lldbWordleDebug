@@ -1,0 +1,217 @@
+Script started on Tue Oct 25 14:25:36 2022
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://campus-030-232.ucdavis.edu/Users/ainekeenan[0m[27m[24m[Jainekeenan@campus-030-232 ~ % [K[?2004hccd ecs36b_f2022[?2004l
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://campus-030-232.ucdavis.edu/Users/ainekeenan/ecs36b_f2022[0m[27m[24m[Jainekeenan@campus-030-232 ecs36b_f2022 % [K[?2004hccd hw1[?2004l
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://campus-030-232.ucdavis.edu/Users/ainekeenan/ecs36b_f2022/hw1[0m[27m[24m[Jainekeenan@campus-030-232 hw1 % [K[?2004hggcc -g wordle.c[?2004l
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://campus-030-232.ucdavis.edu/Users/ainekeenan/ecs36b_f2022/hw1[0m[27m[24m[Jainekeenan@campus-030-232 hw1 % [K[?2004hllldb a.out[?2004l
+(lldb) target create "a.out"
+Current executable set to '/Users/ainekeenan/ecs36b_f2022/hw1/a.out' (arm64).
+(lldb) [1G[2m(lldb) [0m[8Gb wordle.c 139
+Breakpoint 1: no locations (pending).
+WARNING:  Unable to resolve breakpoint to any actual locations.
+(lldb) [1G[2m(lldb) [0m[8Gb wordle.c: 139
+Breakpoint 2: where = a.out`main + 536 at wordle.c:139:3, address = 0x000000010000278c
+(lldb) [1G[2m(lldb) [0m[8Gb wordle.c: 160
+Breakpoint 3: where = a.out`menu + 52 at wordle.c:162:58, address = 0x0000000100002ae4
+(lldb) [1G[2m(lldb) [0m[8Gr
+Process 31553 launched: '/Users/ainekeenan/ecs36b_f2022/hw1/a.out' (arm64)
+Reading cache...  [OK]
+Main Menu
+=========
+NEW: start a new game.
+LOAD <num>: load a specific game
+HELP: More information
+EXIT: End game
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mbreakpoint 3.1[0m
+    frame #0: [33m0x0000000100002ae4[0m a.out`menu at [36mwordle.c[0m:[33m162[0m:[33m58[0m
+[33m  [0m 159 			"LOAD <num>: load a specific game" EOL
+[33m  [0m 160 			"HELP: More information" EOL
+[33m  [0m 161 			"EXIT: End game");
+[33m->[0m 162 		printf("The game number must be in range of 1-%li" EOL, [4mwordCount[0m);
+[33m  [0m 163 		[32mwhile[0m ([32mtrue[0m) {
+[33m  [0m 164 			printf("Input: ");
+[33m  [0m 165 			[32mwhile[0m ((scan = scanf("%20s", buffer)) != [31m1[0m) {
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gn
+The game number must be in range of 1-2315
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mstep over[0m
+    frame #0: [33m0x0000000100002afc[0m a.out`menu at [36mwordle.c[0m:[33m163[0m:[33m2[0m
+[33m  [0m 160 			"HELP: More information" EOL
+[33m  [0m 161 			"EXIT: End game");
+[33m  [0m 162 		printf("The game number must be in range of 1-%li" EOL, wordCount);
+[33m->[0m 163 		[32m[4mwhile[0m[0m ([32mtrue[0m) {
+[33m  [0m 164 			printf("Input: ");
+[33m  [0m 165 			[32mwhile[0m ((scan = scanf("%20s", buffer)) != [31m1[0m) {
+[33m  [0m 166 				[32mif[0m (scan == EOF) {
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gn
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mstep over[0m
+    frame #0: [33m0x0000000100002b08[0m a.out`menu at [36mwordle.c[0m:[33m164[0m:[33m3[0m
+[33m  [0m 161 			"EXIT: End game");
+[33m  [0m 162 		printf("The game number must be in range of 1-%li" EOL, wordCount);
+[33m  [0m 163 		[32mwhile[0m ([32mtrue[0m) {
+[33m->[0m 164 			[4mprintf[0m("Input: ");
+[33m  [0m 165 			[32mwhile[0m ((scan = scanf("%20s", buffer)) != [31m1[0m) {
+[33m  [0m 166 				[32mif[0m (scan == EOF) {
+[33m  [0m 167 					[32mreturn[0m -[31m1[0m;
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gc
+Process 31553 resuming
+Input: new
+candidates (after filtering) are 
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mbreakpoint 2.1[0m
+    frame #0: [33m0x000000010000278c[0m a.out`main at [36mwordle.c[0m:[33m139[0m:[33m3[0m
+[33m  [0m 136 	
+[33m  [0m 137 	#endif [35m/*LATER */[0m
+[33m  [0m 138 			printf("candidates (after filtering) are \n");
+[33m->[0m 139 			[4mfilterWords[0m(impossible_array);
+[33m  [0m 140 			#endif
+[33m  [0m 141 		} [32melse[0m {
+[33m  [0m 142 			[32mreturn[0m EXIT_SUCCESS;
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gs
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mstep in[0m
+    frame #0: [33m0x0000000100002db0[0m a.out`filterWords(impossible="bcde") at [36mwordle.c[0m:[33m547[0m:[33m7[0m
+[33m  [0m 544 	{
+[33m  [0m 545 	  [32munsigned[0m [32mint[0m i, j, flag;
+[33m  [0m 546 	
+[33m->[0m 547 	  [32mif[0m ([4mimpossible[0m == NULL) [32mreturn[0m NULL;
+[33m  [0m 548 	  [32munsigned[0m [32mint[0m char_count = strlen(impossible);
+[33m  [0m 549 	  [32mif[0m (char_count > [31m26[0m) [32mreturn[0m NULL;
+[33m  [0m 550 	
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gn
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mstep over[0m
+    frame #0: [33m0x0000000100002dc4[0m a.out`filterWords(impossible="bcde") at [36mwordle.c[0m:[33m548[0m:[33m36[0m
+[33m  [0m 545 	  [32munsigned[0m [32mint[0m i, j, flag;
+[33m  [0m 546 	
+[33m  [0m 547 	  [32mif[0m (impossible == NULL) [32mreturn[0m NULL;
+[33m->[0m 548 	  [32munsigned[0m [32mint[0m char_count = strlen([4mimpossible[0m);
+[33m  [0m 549 	  [32mif[0m (char_count > [31m26[0m) [32mreturn[0m NULL;
+[33m  [0m 550 	
+[33m  [0m 551 	  [32mchar[0m ** result = ([32mchar[0m **) malloc(MAXWORDS * [32msizeof[0m([32mchar[0m *));
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gn
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mstep over[0m
+    frame #0: [33m0x0000000100002dd4[0m a.out`filterWords(impossible="bcde") at [36mwordle.c[0m:[33m549[0m:[33m7[0m
+[33m  [0m 546 	
+[33m  [0m 547 	  [32mif[0m (impossible == NULL) [32mreturn[0m NULL;
+[33m  [0m 548 	  [32munsigned[0m [32mint[0m char_count = strlen(impossible);
+[33m->[0m 549 	  [32mif[0m ([4mchar_count[0m > [31m26[0m) [32mreturn[0m NULL;
+[33m  [0m 550 	
+[33m  [0m 551 	  [32mchar[0m ** result = ([32mchar[0m **) malloc(MAXWORDS * [32msizeof[0m([32mchar[0m *));
+[33m  [0m 552 	
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gf[K[1G[2m(lldb) [0m[8Gn
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mstep over[0m
+    frame #0: [33m0x0000000100002df4[0m a.out`filterWords(impossible="bcde") at [36mwordle.c[0m:[33m551[0m:[33m30[0m
+[33m  [0m 548 	  [32munsigned[0m [32mint[0m char_count = strlen(impossible);
+[33m  [0m 549 	  [32mif[0m (char_count > [31m26[0m) [32mreturn[0m NULL;
+[33m  [0m 550 	
+[33m->[0m 551 	  [32mchar[0m ** result = ([32mchar[0m **) [4mmalloc[0m(MAXWORDS * [32msizeof[0m([32mchar[0m *));
+[33m  [0m 552 	
+[33m  [0m 553 	  [32mchar[0m buffer[[31m32[0m];
+[33m  [0m 554 	  fseek(fpAll, [31m0[0m, SEEK_SET);
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gfinish
+guava
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mstep out[0m
+Return value: (char **) $0 = 0x0000000108008000
+
+    frame #0: [33m0x0000000100002790[0m a.out`main at [36mwordle.c[0m:[33m141[0m:[33m2[0m
+[33m  [0m 138 			printf("candidates (after filtering) are \n");
+[33m  [0m 139 			filterWords(impossible_array);
+[33m  [0m 140 			#endif
+[33m->[0m 141 		[4m}[0m [32melse[0m {
+[33m  [0m 142 			[32mreturn[0m EXIT_SUCCESS;
+[33m  [0m 143 		}
+[33m  [0m 144 		printf("Running game #%i" EOL, gameId + [31m1[0m);
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gb wordle.c: 260
+Breakpoint 4: where = a.out`gameLoop + 404 at wordle.c:262:13, address = 0x00000001000031a8
+(lldb) [1G[2m(lldb) [0m[8Gc
+Process 31553 resuming
+Running game #931
+word	unused alphabet
+====	===============
+candidates (after filtering) are 
+guava
+
+Guess 1: 
+guava
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mbreakpoint 4.1[0m
+    frame #0: [33m0x00000001000031a8[0m a.out`gameLoop at [36mwordle.c[0m:[33m262[0m:[33m13[0m
+[33m  [0m 259 	           strcpy(guess, possibleWords[w]); 
+[33m  [0m 260 	
+[33m  [0m 261 	[35m//printf("Value of w %d \n", w);[0m
+[33m->[0m 262 	            [4m++[0mw;
+[33m  [0m 263 	
+[33m  [0m 264 			
+[33m  [0m 265 	        /* for (int i =0; i<sizeof(possibleWords)/sizeof(possibleWords[0]); i++){
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8Gp w
+(int) $1 = 0
+(lldb) [1G[2m(lldb) [0m[8Gp possibleWords
+(char **) $2 = 0x0000000108028000
+(lldb) [1G[2m(lldb) [0m[8Gp possibleWords[w]
+(char *) $3 = 0x000060000000c000 "guava"
+(lldb) [1G[2m(lldb) [0m[8Gp pp[K[1G[2m(lldb) [0m[11GossibleWords[1]
+(char *) $4 = 0x0000000000000000
+(lldb) [1G[2m(lldb) [0m[8Gp guess
+(char [6]) $5 = "guava"
+(lldb) [1G[2m(lldb) [0m[8Gp word
+(char [6]) $6 = "guava"
+(lldb) [1G[2m(lldb) [0m[8Gb wordle.c: 363
+Breakpoint 5: where = a.out`gameLoop + 516 at wordle.c:363:7, address = 0x0000000100003218
+(lldb) [1G[2m(lldb) [0m[8Gb wordle.c [1G[2m(lldb) [0m[18G: 384
+Breakpoint 6: where = a.out`gameLoop + 592 at wordle.c:385:6, address = 0x0000000100003264
+(lldb) [1G[2m(lldb) [0m[8Gc
+Process 31553 resuming
+Process 31553 stopped
+* thread #1, queue = [32m'com.apple.main-thread'[0m, stop reason = [31mbreakpoint 6.1[0m
+    frame #0: [33m0x0000000100003264[0m a.out`gameLoop at [36mwordle.c[0m:[33m385[0m:[33m6[0m
+[33m  [0m 382 			[35m//++z;[0m
+[33m  [0m 383 		 }
+[33m  [0m 384 		[35m// ++z;[0m
+[33m->[0m 385 		[32mif[0m ([4mstrcmp[0m(guess, word)) {
+[33m  [0m 386 			printf("You lose. The word was %s\n", word);
+[33m  [0m 387 		} [32melse[0m {
+[33m  [0m 388 			printf("You win. The word was %s\n", word);
+Target 0: (a.out) stopped.
+(lldb) [1G[2m(lldb) [0m[8GNo break poin at 36[K[1G[2m(lldb) [0m[26G[K[1G[2m(lldb) [0m[25G[1G[2m(lldb) [0m[24G[K[1G[2m(lldb) [0m[23G[K[1G[2m(lldb) [0m[22G[1G[2m(lldb) [0m[21G[K[1G[2m(lldb) [0m[20G[K[1G[2m(lldb) [0m[19G[K[1G[2m(lldb) [0m[18G[K[1G[2m(lldb) [0m[17G[1G[2m(lldb) [0m[16G[K[1G[2m(lldb) [0m[15G[K[1G[2m(lldb) [0m[14G[K[1G[2m(lldb) [0m[13G[K[1G[2m(lldb) [0m[12G[K[1G[2m(lldb) [0m[11G[1G[2m(lldb) [0m[10G[K[1G[2m(lldb) [0m[9G[K[1G[2m(lldb) [0m[8GDid not break at 363, as word is correct
+[0;1;31merror: [0m'Did' is not a valid command.
+(lldb) [1G[2m(lldb) [0m[8Gp possiblewor[K[1G[2m(lldb) [0m[20G[K[1G[2m(lldb) [0m[19G[K[1G[2m(lldb) [0m[18GWords
+(char **) $7 = 0x0000000108028000
+(lldb) [1G[2m(lldb) [0m[8Gp possibelWords[w]
+error: expression failed to parse:
+error: <user expression 7>:1:1: use of undeclared identifier 'possibelWords'
+possibelWords[w]
+^
+(lldb) [1G[2m(lldb) [0m[8Gp ps[K[1G[2m(lldb) [0m[11GossibleWords[0]
+(char *) $8 = 0x000060000000c000 "guava"
+(lldb) [1G[2m(lldb) [0m[8Gp word
+(char [6]) $9 = "guava"
+(lldb) [1G[2m(lldb) [0m[8GOne w[K[1G[2m(lldb) [0m[12Gone word from filter words
+[0;1;31merror: [0m'One' is not a valid command.
+(lldb) [1G[2m(lldb) [0m[8Gonly[K[1G[2m(lldb) [0m[11G[K[1G[2m(lldb) [0m[10G[K[1G[2m(lldb) [0m[9G[K[1G[2m(lldb) [0m[8Gc
+Process 31553 resuming
+You win. The word was guava
+Process 31553 exited with status = 0 (0x00000000) 
+(lldb) [1G[2m(lldb) [0m[8Gquit
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://campus-030-232.ucdavis.edu/Users/ainekeenan/ecs36b_f2022/hw1[0m[27m[24m[Jainekeenan@campus-030-232 hw1 % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+Script done on Tue Oct 25 14:29:20 2022
