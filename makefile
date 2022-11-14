@@ -3,3 +3,6 @@ wordle: wordle.o
 
 wordle.o: wordle.c
 	gcc -c wordle.c
+
+clean:
+	rm -rf *.o
