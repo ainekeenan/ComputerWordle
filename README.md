@@ -4,7 +4,7 @@ This program takes the simple game wordle. The instructions for wordle is below.
 
 A very simple wordle clone in C.
 It doesn't uses any cursor movement instructions or OS dependent functions.
-
+Code for the wordle game is from: https://github.com/AyrA/Wordle-C  .
 
 
 ## Quick introduction to Wordle
